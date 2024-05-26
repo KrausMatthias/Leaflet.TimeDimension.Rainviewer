@@ -1,0 +1,27 @@
+{
+  "name": "leaflet.timedimension.rainviewer",
+  "version": "0.1.0",
+  "description": "Display Rain Radar Layers from Rainviewer.com using Leaflet.TimeDimension",
+  "main": "src/Rainviewer.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrausMatthias/Leaflet.TimeDimension.Rainviewer.git"
+  },
+  "keywords": [
+    "javascript",
+    "maps",
+    "leaflet",
+    "weather",
+    "weather-api",
+    "timedimension"
+  ],
+  "author": "Matthias Kraus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KrausMatthias/Leaflet.TimeDimension.Rainviewer/issues"
+  },
+  "homepage": "https://github.com/KrausMatthias/Leaflet.TimeDimension.Rainviewer#readme",
+  "dependencies": {
+    "leaflet-timedimension": "^1.1.1"
+  }
+}
