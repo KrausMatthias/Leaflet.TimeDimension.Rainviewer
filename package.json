@@ -1,6 +1,6 @@
 {
   "name": "leaflet.timedimension.rainviewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display Rain Radar Layers from Rainviewer.com using Leaflet.TimeDimension",
   "main": "src/Rainviewer.js",
   "repository": {

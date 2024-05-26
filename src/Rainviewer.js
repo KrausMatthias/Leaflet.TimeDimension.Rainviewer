@@ -6,7 +6,7 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
     
     options['attribution'] = options['attribution'] || "<a href='https://www.rainviewer.com/api.html' rel='noopener noreferrer' target='_blank'>RainViewer</a>";
 
-    L.TimeDimension.Layer.TileLayer.prototype.initialize.call(this, L.tileLayer(''), options);
+    L.TimeDimension.Layer.prototype.initialize.call(this, L.tileLayer(''), options);
         this._metadata = {};
         this._frames = {};
         this._layers = {};
@@ -104,7 +104,7 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
     },
 
     setOpacity: function(opacity) {
-        L.TimeDimension.Layer.TileLayer.prototype.setOpacity.apply(this, arguments);
+        L.TimeDimension.Layer.prototype.setOpacity.apply(this, arguments);
         // apply to all preloaded caches
         for (var prop in this._layers) {
             if (this._layers.hasOwnProperty(prop) && this._layers[prop].setOpacity) {
@@ -114,7 +114,7 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
     },
     
     setZIndex: function(zIndex){
-        L.TimeDimension.Layer.TileLayer.prototype.setZIndex.apply(this, arguments);
+        L.TimeDimension.Layer.prototype.setZIndex.apply(this, arguments);
         // apply to all preloaded caches
         for (var prop in this._layers) {
             if (this._layers.hasOwnProperty(prop) && this._layers[prop].setZIndex) {
