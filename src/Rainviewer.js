@@ -10,10 +10,11 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
         this._metadata = {};
         this._frames = {};
         this._layers = {};
-        this._defaultTime = 0;
+        this._defaultTime = 12;
         this._availableTimes = [];
         this._timeCacheBackward = this.options.cacheBackward || this.options.cache || 0;
         this._timeCacheForward = this.options.cacheForward || this.options.cache || 0;
+        this._updateTimeDimension = this.options.updateTimeDimension  || true ;
         this._updateTimeDimensionMode = this.options.updateTimeDimensionMode || 'union'; // 'union', 'replace' or extremes
         this._type = this.options.type || 'radar';
         this._loaded = false;
@@ -54,7 +55,7 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
           this._timeDimension.setAvailableTimes(this._availableTimes, this._updateTimeDimensionMode);
       }
       if (this._updateCurrentTime && this._timeDimension && this._availableTimes.length) {
-          this._timeDimension.setCurrentTime(this._availableTimes[0]);
+          this._timeDimension.setCurrentTime(this._availableTimes[this._defaultTime]);
       }
     },
     eachLayer: function(method, context) {

@@ -37,6 +37,7 @@
     }).addTo(map);
       
     let rainviewer_layer = L.timeDimension.layer.rainviewer("https://api.rainviewer.com/public/weather-maps.json", {opacity: 0.7});
+    rainviewer_layer.addTo(map);
 
     let rainviewer_satellite_layer = L.timeDimension.layer.rainviewer("https://api.rainviewer.com/public/weather-maps.json", {type: 'satellite', opacity: 0.7});
 
