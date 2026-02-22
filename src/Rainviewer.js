@@ -5,6 +5,7 @@ L.TimeDimension.Layer.Rainviewer = L.TimeDimension.Layer.extend({
   initialize: function(endpoint, options={}) {
     
     options['attribution'] = options['attribution'] || "<a href='https://www.rainviewer.com/api.html' rel='noopener noreferrer' target='_blank'>RainViewer</a>";
+    options['maxNativeZoom'] = Math.max(options['maxNativeZoom'] || 7, 7); 
 
     L.TimeDimension.Layer.prototype.initialize.call(this, L.tileLayer(''), options);
         this._metadata = {};
